@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/newProductFragment"
+        android:name="com.example.clothes.NewProduct.NewProductFragment"
+        android:label="fragment_new_product"
+        tools:layout="@layout/fragment_new_product">
+        <action
+            android:id="@+id/action_newProductFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.clothes.homepage.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_homePageFragment_to_newProductFragment"
+            app:destination="@id/newProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.clothes.productDetail.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail">
+
+        <argument
+            android:name="price"
+            app:argType="string"/>
+
+        <argument
+            android:name="photo"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_productDetailFragment_to_catagoryFragment"
+            app:destination="@id/catagoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catagoryFragment"
+        android:name="com.example.clothes.catagory.CatagoryFragment"
+        android:label="fragment_catagory_fragment"
+        tools:layout="@layout/fragment_catagory_fragment" />
+</navigation>

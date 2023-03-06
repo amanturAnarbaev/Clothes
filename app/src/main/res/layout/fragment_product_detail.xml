@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".productDetail.ProductDetailFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Oblong Bag"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/like"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="66dp"
+        android:background="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shop"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_baseline_shopping_bag_24"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/nameProduct"
+        tools:listitem="@layout/item_detail_product" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/colorTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="color"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/detailRecycle"
+        app:layout_constraintTop_toBottomOf="@id/detailRecycle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/colorBlack"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_circle"
+        android:backgroundTint="@color/black"
+        app:icon="@drawable/ic_baseline_done_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/white"
+        app:layout_constraintStart_toEndOf="@id/colorTv"
+        app:layout_constraintTop_toBottomOf="@id/detailRecycle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/color_grey"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        app:backgroundTint="@color/light_grey"
+        app:icon="@drawable/ic_baseline_done_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="20dp"
+        app:iconTint="@color/white"
+        app:layout_constraintStart_toEndOf="@id/colorBlack"
+        app:layout_constraintTop_toBottomOf="@id/detailRecycle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        app:backgroundTint="@color/skins_color"
+        app:icon="@drawable/ic_baseline_done_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="20dp"
+        app:iconTint="@color/white"
+        app:layout_constraintStart_toEndOf="@id/color_grey"
+        app:layout_constraintTop_toBottomOf="@id/detailRecycle" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="273dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="19dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color_grey" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sizeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="size"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/colorTv"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/ic_baseline_help_24"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintStart_toEndOf="@id/sizeTv"
+        app:layout_constraintTop_toTopOf="@id/sizeTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/xs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:text="XS"
+
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/sizeTv"
+        app:layout_constraintTop_toTopOf="@id/sizeTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:text="S"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/xs"
+        app:layout_constraintTop_toTopOf="@id/sizeTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:text="M"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/s"
+        app:layout_constraintTop_toTopOf="@id/sizeTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:text="L"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/m"
+        app:layout_constraintTop_toTopOf="@id/sizeTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/xl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:text="XL"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/l"
+        app:layout_constraintTop_toTopOf="@id/sizeTv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="315dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="@color/white"
+        android:text="Add to Cart"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_shop"
+        app:iconTint="@color/black"
+        app:iconGravity="textStart"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/s"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

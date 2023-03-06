@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NewProduct.NewProductFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="49dp"
+        android:background="@drawable/ic_baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/newProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="New Products"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37.69dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newProduct">
+
+        <TableRow>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TableName"
+                android:text="All" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TableName"
+
+                android:text="Apparel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TableName"
+
+                android:text="Dress" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TableName"
+
+                android:text="Tshirt" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TableName"
+
+
+                android:text="Bag" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="95dp"
+        app:layout_constraintTop_toBottomOf="@id/tableLayout"
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tableLayout"
+            android:layout_marginTop="153dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            tools:ignore="NotSibling"
+            tools:listitem="@layout/item_new_product" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/exporMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Explore More"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/right"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Explore More"
+        android:layout_marginStart="7dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/exporMore"
+        android:background="@drawable/ic_baseline_arrow_forward_24"
+        app:layout_constraintStart_toEndOf="@id/exporMore"
+        app:layout_constraintBottom_toBottomOf="@id/exporMore" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

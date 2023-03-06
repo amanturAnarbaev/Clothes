@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_home"
+    tools:context=".homepage.HomePageFragment">
+
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="187dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ourFashion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="top"
+        android:lineSpacingExtra="-8sp"
+        android:text="@string/our_fashion"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/shopBla"
+        android:layout_width="186dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="219dp"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="-5sp"
+        android:text="@string/shop_the_blabla"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ourFashion" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/arrowRight"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shopBla"
+
+            />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/faccebook"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/background_circle"
+        android:src="@drawable/ic_facebook_icon"
+        app:contentPadding="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arrowRight" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/twitter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/background_circle"
+        android:src="@drawable/ic_twitter_icon"
+        app:contentPadding="7dp"
+        app:layout_constraintStart_toEndOf="@id/faccebook"
+        app:layout_constraintTop_toBottomOf="@id/arrowRight" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/background_circle"
+        android:src="@drawable/ic_google_icon"
+        app:contentPadding="7dp"
+        app:layout_constraintStart_toEndOf="@id/twitter"
+        app:layout_constraintTop_toBottomOf="@id/arrowRight" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="29dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="skip"
+        android:lineSpacingExtra="-6sp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

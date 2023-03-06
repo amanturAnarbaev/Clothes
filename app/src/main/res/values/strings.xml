@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Clothes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shop_the_blabla">Shop the most modern essensials</string>
+    <string name="our_fashion">OUR FASHION</string>
+    <string name="_21wn_reversible_angora_cardigan">21WN reversible angora cardigan</string>
+
+</resources>
