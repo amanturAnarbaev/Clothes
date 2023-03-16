@@ -69,27 +69,19 @@
 
     </TableLayout>
 
-    <RelativeLayout
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="95dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tableLayout"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/tableLayout"
-
-        >
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/tableLayout"
-            android:layout_marginTop="153dp"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            tools:ignore="NotSibling"
-            tools:listitem="@layout/item_new_product" />
-
-    </RelativeLayout>
+        tools:ignore="NotSibling"
+        tools:listitem="@layout/item_new_product" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/exporMore"
@@ -100,27 +92,23 @@
         android:text="Explore More"
         android:textColor="@color/black"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/right"
         android:layout_width="15dp"
         android:layout_height="15dp"
+        android:layout_marginStart="7dp"
+        android:background="@drawable/ic_baseline_arrow_forward_24"
         android:fontFamily="@font/poppins_regular"
         android:text="Explore More"
-        android:layout_marginStart="7dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="@id/exporMore"
-        android:background="@drawable/ic_baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@id/exporMore"
         app:layout_constraintStart_toEndOf="@id/exporMore"
-        app:layout_constraintBottom_toBottomOf="@id/exporMore" />
-
-
-
-
+        app:layout_constraintTop_toTopOf="@id/exporMore" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

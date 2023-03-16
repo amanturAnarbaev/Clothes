@@ -10,9 +10,10 @@
 
     <View
         android:id="@+id/rectangle_2"
-        android:layout_width="187dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rectangle_2"
+        android:foregroundGravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="top"
         android:lineSpacingExtra="-8sp"
@@ -37,25 +38,26 @@
         android:layout_width="186dp"
         android:layout_height="93dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="219dp"
+        android:gravity="center"
         android:letterSpacing="0.03"
         android:lineSpacingExtra="-5sp"
         android:text="@string/shop_the_blabla"
         android:textColor="@color/black"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ourFashion" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/arrowRight"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="30dp"
-            android:background="@drawable/ic_baseline_arrow_forward_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/shopBla"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/ic_baseline_arrow_forward_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopBla"
 
-            />
+        />
 
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -99,15 +101,15 @@
         android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+
         android:layout_marginEnd="29dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="skip"
         android:lineSpacingExtra="-6sp"
+        android:text="skip"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/ourFashion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
